@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="mapSample">
 
-<head>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Google Maps Sample App</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="app/controllers.js"></script>
+    <title>AngularJS Google Maps Sample</title>
 </head>
 
-<body ng-app="customMap">
-  <div ng-controller="mapController">
-    <ui-gmap-google-map center="map.center" options="options" zoom="map.zoom"></ui-gmap-google-map>
-  </div>
-  <script src="bower_components/lodash/dist/lodash.min.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-  <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
-  <script src="app.js"></script>
+<body ng-controller="MainController">
+    <h1 class="title">AngulerJS Google Maps Sample</h1>
+    <div class="mapCanvas">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="map.draggable" options="options">
+            <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id">
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
 </body>
 
 </html>
