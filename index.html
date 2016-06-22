@@ -9,10 +9,13 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
-<body>
-
+<body ng-app="customMap">
+  <div ng-controller="mapController">
+    <ui-gmap-google-map center="map.center" options="options" zoom="map.zoom"></ui-gmap-google-map>
+  </div>
 </body>
 
 </html>
