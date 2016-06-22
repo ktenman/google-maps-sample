@@ -17,6 +17,8 @@
   "dependencies": {
     "angular": "^1.5.7",
     "lodash": "^4.13.1",
-    "angular-google-maps": "^2.3.3"
+    "angular-google-maps": "^2.3.3",
+    "angular-resource": "^1.5.7",
+    "angular-route": "^1.5.7"
   }
 }

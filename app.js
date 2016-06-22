@@ -5,13 +5,13 @@
     .config(function(uiGmapGoogleMapApiProvider) {
         uiGmapGoogleMapApiProvider.configure({
             key: 'AIzaSyBXdebOIenfCQGQZfIlTPQMTw0ZHeC7tww',
-            v: '3.17',
+            v: '3.20',
             libraries: 'weather,geometry,visualization'
         });
     })
 
     .controller("mapController", function($scope, uiGmapGoogleMapApi) {
-
+        // $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
         // Define variables for our Map object
         var areaLat = 44.2126995,
             areaLng = -100.2471641,
